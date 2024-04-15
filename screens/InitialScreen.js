@@ -5,9 +5,11 @@ import { useContext } from 'react';
 
 import { LastPointerContext } from '../store/context/lastPointer-context';
 
+import { UserContext } from '../store/context/user-context';
+
 const InitialScreen = ({ navigation }) => {
   const lastPointerCtx = useContext(LastPointerContext);
-
+  const userContext = useContext(UserContext);
   
   const [highScore, setHighScore] = useState();
 
@@ -46,6 +48,8 @@ const InitialScreen = ({ navigation }) => {
       <Text style={styles.title2}>Last Score: {lastPointerCtx.lastPoint}</Text>
       )}
 
+      
+
 
       <Image
         source={require('../assets/images/main.png')} // Replace with the actual path to your image file
@@ -56,6 +60,7 @@ const InitialScreen = ({ navigation }) => {
         onPress={() => navigation.navigate('GameScreen', { highPoints: highScore })}>
             <Text style={styles.textStyle}>Play</Text>
         </TouchableOpacity>
+        <Text style={styles.title}>criador: {userContext.user}</Text>
     </View>
   );
 };
