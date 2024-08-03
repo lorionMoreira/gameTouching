@@ -1,7 +1,7 @@
 {
   "build": {
     "preview": {
-      "node": "16.20.2",
+      "node": "18.19.1",
       "android": {
         "buildType": "apk",
         "distribution": "internal",

@@ -13,7 +13,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4.0.2
         with:
-          node-version: 16.20.2
+          node-version: 18.19.1
           cache: 'npm'
 
       - name: Set up JDK 17
@@ -28,8 +28,8 @@ jobs:
       - name: Setup Expo
         uses: expo/expo-github-action@v8
         with:
-          expo-version: 6.3.10
-          eas-version: 7.8.1
+          expo-version: latest
+          eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Install dependencies
